@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>WELCOME</h1>
+    <p>Plz fill up this form to move forward.</p>
+    <button id="open">Signup</button>
+  </header>
+  <main>
+    
+    <div id="item" class="modal">
+      <div class="content">
+        <span class="close-btn" span>
+        <form id="Form">
+          <label for="name">Name ():</label>
+          <input type="text" id="name" name="name" pattern="[A-Za-z]{5,}" required>
+
+          <label for="email">Email ():</label>
+          <input type="email" id="email" name="email" pattern="^[a-zA-Z0-9._%+-]+@gmail\.com$" required>
+
+          <label for="password">Password ():</label>
+          <input type="password" id="password" name="password" minlength="8" required>
+
+          <label for="phone">Phone Number (10 digits):</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender" required>
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+
+          <label for="sports">Sports you are interested in:</label>
+          <select id="sports" name="sports[]" multiple required>
+            <option value="cricket">Cricket</option>
+            <option value="Football">Football</option>
+            <option value="kabaddi">kabaddi</option>
+            <option value="Basketball">Basketball</option>
+            <option value="Tennis">Tennis</option>
+            <option value="Badminton">Badminton</option>
+            <option value="kho-kho">kho-kho</option>
+            
+          </select>
+
+          <button type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+
+</body>
+</html>
